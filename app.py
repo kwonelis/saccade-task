@@ -5,6 +5,7 @@ import pandas as pd
 import plotly.graph_objs as go
 import numpy as np
 import plotly.express as px
+from tkinter.filedialog import askopenfilename
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -15,7 +16,8 @@ server = app.server
 #              "Time", "Amplitude", "Peak Velocity", "Saccade-X", "Saccade-Y",
 #              "Latency", "Pixel Distance", "Degree Distance", "Target-X", "Target-Y"]
 
-sacc_df = pd.read_csv('https://raw.githubusercontent.com/kwonelis/SaccadeData/master/all_single_saccade_data.csv')
+csv_file_path = askopenfilename()
+sacc_df = pd.read_csv(csv_file_path)
 
 all_measures = ["Amplitude", "Peak Velocity","Latency", "Pixel Distance", "Degree Distance"]
 
