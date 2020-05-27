@@ -195,4 +195,4 @@ def update_pixel_graph(clickData_p, clickData_t):
     }
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server()
